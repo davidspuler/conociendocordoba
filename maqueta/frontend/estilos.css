@@ -43,21 +43,25 @@ header{
 	float: right;
 } */
 
-#menu {
+/* #menu {
 	position: absolute;
 	top: 30px;
 	right: 40px;
 	padding: 0.5em 0;
+} */
+
+.logo{
+	width: 100px;
 }
 
-.nav a{
+/* .nav a{
 	font-size: 17px;
 	padding: 30px;
 	color: #fff;
 	text-decoration: none;
-}
+} */
 
-.nav a:hover{
+/* .nav a:hover{
 	color: #fff;
 }
 
@@ -86,7 +90,7 @@ ul{
 
 .nav li:hover > ul{
 	display: block;
-}
+} */
 
 /*PARTE NUEVA*/
 
