@@ -17,7 +17,8 @@ import { VistasModule } from './vistas/vistas.module';
     AppRoutingModule,
     AuthModule,
     SharedModule,
-    VistasModule
+    VistasModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

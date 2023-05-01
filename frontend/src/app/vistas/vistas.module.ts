@@ -15,6 +15,8 @@ import { ValleDeCalamuchitaComponent } from './valle-de-calamuchita/valle-de-cal
 import { ValleDeParavachascaComponent } from './valle-de-paravachasca/valle-de-paravachasca.component';
 import { ValleDePunillaComponent } from './valle-de-punilla/valle-de-punilla.component';
 import { ValleDeTraslasierrasComponent } from './valle-de-traslasierras/valle-de-traslasierras.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { Pagina404Component } from './pagina404/pagina404.component';
 
 
 
@@ -34,10 +36,12 @@ import { ValleDeTraslasierrasComponent } from './valle-de-traslasierras/valle-de
     ValleDeCalamuchitaComponent,
     ValleDeParavachascaComponent,
     ValleDePunillaComponent,
-    ValleDeTraslasierrasComponent
+    ValleDeTraslasierrasComponent,
+    Pagina404Component,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports:[
     HomeComponent,
@@ -54,7 +58,8 @@ import { ValleDeTraslasierrasComponent } from './valle-de-traslasierras/valle-de
     ValleDeCalamuchitaComponent,
     ValleDeParavachascaComponent,
     ValleDePunillaComponent,
-    ValleDeTraslasierrasComponent
+    ValleDeTraslasierrasComponent,
+    Pagina404Component
   ]
 })
 export class VistasModule { }
