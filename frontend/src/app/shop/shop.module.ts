@@ -4,6 +4,7 @@ import { PaqueteTuristicoCbaComponent } from './paquete-turistico-cba/paquete-tu
 import { PaqueteTuristicoCpazComponent } from './paquete-turistico-cpaz/paquete-turistico-cpaz.component';
 import { PaqueteTuristicoLaCumbrecitaComponent } from './paquete-turistico-la-cumbrecita/paquete-turistico-la-cumbrecita.component';
 import { PaqueteTuristicoTraslasierraComponent } from './paquete-turistico-traslasierra/paquete-turistico-traslasierra.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -15,7 +16,8 @@ import { PaqueteTuristicoTraslasierraComponent } from './paquete-turistico-trasl
     PaqueteTuristicoTraslasierraComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     PaqueteTuristicoCbaComponent,

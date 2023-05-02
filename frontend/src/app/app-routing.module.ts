@@ -17,7 +17,10 @@ import { Pagina404Component } from './vistas/pagina404/pagina404.component';
 import { SobreNosotrosComponent } from './vistas/sobre-nosotros/sobre-nosotros.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ContactoComponent } from './vistas/contacto/contacto.component';
-import { PaqueteTuristicoLaCumbrecitaComponent} from './shop/paquete-turistico-la-cumbrecita/paquete-turistico-la-cumbrecita.component'
+import { PaqueteTuristicoLaCumbrecitaComponent } from './shop/paquete-turistico-la-cumbrecita/paquete-turistico-la-cumbrecita.component';
+import { PaqueteTuristicoCbaComponent } from './shop/paquete-turistico-cba/paquete-turistico-cba.component';
+import { PaqueteTuristicoCpazComponent } from './shop/paquete-turistico-cpaz/paquete-turistico-cpaz.component';
+import { PaqueteTuristicoTraslasierraComponent } from './shop/paquete-turistico-traslasierra/paquete-turistico-traslasierra.component';
 
 const routes: Routes = [
   //La siguiente linea funciona como index.html, sera la vista que cargara por defecto al entrar a la página
@@ -46,12 +49,16 @@ const routes: Routes = [
   {path: 'turismo-religioso', component:TurismoReligiosoComponent},
   {path: 'camino-del-vino', component:CaminoDelVinoComponent},
 
+    // paquetes turisticos
+  {path: 'paquete-turistico-la-cumbrecita', component: PaqueteTuristicoLaCumbrecitaComponent},
+  {path: 'paquete-turistico-cba', component: PaqueteTuristicoCbaComponent},
+  {path: 'paquete-turistico-cpaz', component: PaqueteTuristicoCpazComponent},
+  {path: 'paquete-turistico-traslasierra', component: PaqueteTuristicoTraslasierraComponent},
+
   //vista 404 en caso de que la pagina solicitada no exista
   {path: '**', component:Pagina404Component},
 
-  // paquetes turisticos
-  {path: 'paquete-turistico-la-cumbrecita', component:PaqueteTuristicoLaCumbrecitaComponent}
-  
+ 
 
 
 ];
