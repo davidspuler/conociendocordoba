@@ -37,6 +37,7 @@ const routes: Routes = [
   {path: 'norte-y-noreste', component:NorteYNoroesteComponent},
   {path: 'sierras-chicas', component:SierrasChicasComponent},
   {path: 'cordoba-capital', component:CordobaCapitalComponent},
+  
   //Rutas de las actividades turisticas
   {path: 'parques-nacionales', component:ParquesNacionalesComponent},
   {path: 'astroturismo', component:AstroturismoComponent},
