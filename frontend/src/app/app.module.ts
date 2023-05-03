@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
 import { VistasModule } from './vistas/vistas.module';
+import { ShopModule } from './shop/shop.module';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { VistasModule } from './vistas/vistas.module';
     AuthModule,
     SharedModule,
     VistasModule,
+    ShopModule,
     AppRoutingModule
   ],
   providers: [],
