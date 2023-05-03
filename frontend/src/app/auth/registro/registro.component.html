@@ -1,1 +1,84 @@
-<p>registro works!</p>
+<div class="container">
+  <div class="row vh-100 d-flex justify-content-center align-items-center">
+    <div class="col-12 col-md-6">
+      <form class="border p-3">
+        <fieldset>
+          <legend class="text-center fs-1">Bienvenido a Conociendo Córdoba</legend>
+          <div class="mb-3">
+            <label for="name" class="form-label fs-5">Nombre</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              placeholder="Elon"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="apellido" class="form-label fs-5">Apellido</label>
+            <input
+              type="text"
+              id="apellido"
+              class="form-control"
+              placeholder="Musk"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="fecha de nacimiento" class="fs-5"
+              >Fecha de nacimiento</label
+            >
+            <input
+              type="date"
+              id="fecha de nacimiento"
+              class="form-control"
+              min="1930-01-01"
+              max="2023-12-31"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="genero" class="fs-5">Género</label>
+            <select name="genero" id="sexo" class="form-select">
+              <option value="seleccion">Seleccione una opción</option>
+              <option value="masculino">Masculino</option>
+              <option value="femenino">Femenino</option>
+              <option value="no binario">No binario</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label fs-5"
+              >Correo electrónico</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="example@gmail.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label fs-5">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              placeholder="password123"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label fs-5"
+              >Reingrese su contraseña</label
+            >
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              placeholder="password123"
+            />
+          </div>
+          <div class="d-grid mt-5">
+            <button type="submit" class="btn btn-success fw-bold">Enviar</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
