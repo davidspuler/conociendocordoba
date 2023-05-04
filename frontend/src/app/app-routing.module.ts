@@ -21,6 +21,7 @@ import { PaqueteTuristicoLaCumbrecitaComponent } from './shop/paquete-turistico-
 import { PaqueteTuristicoCbaComponent } from './shop/paquete-turistico-cba/paquete-turistico-cba.component';
 import { PaqueteTuristicoCpazComponent } from './shop/paquete-turistico-cpaz/paquete-turistico-cpaz.component';
 import { PaqueteTuristicoTraslasierraComponent } from './shop/paquete-turistico-traslasierra/paquete-turistico-traslasierra.component';
+import { RegistroComponent } from './auth/registro/registro.component';
 
 const routes: Routes = [
   //La siguiente linea funciona como index.html, sera la vista que cargara por defecto al entrar a la página
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'sobre-nosotros', component:SobreNosotrosComponent},
   {path: 'login', component:LoginComponent},
+  {path: 'registro', component:RegistroComponent},
   {path: 'contacto', component:ContactoComponent},
 
 
