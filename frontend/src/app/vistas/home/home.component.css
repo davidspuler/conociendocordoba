@@ -1,0 +1,581 @@
+/* You can add global styles to this file, and also import other style files */
+.logo{
+	width: 100px;
+}
+
+a{
+	color: white;
+}
+
+.dropdown-menu a{
+	color: black;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: helvetica, verdana, calibri;
+}
+
+header, section, footer {
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+}
+
+#portada{
+
+	height: 100vh;
+	background-image:url( ../../../assets/img/portada2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    background-position: bottom;
+	
+}
+
+
+#portada h1{
+	text-align: center;
+	letter-spacing: 0.1em;
+	font-size: 100px;
+	padding-top: 230px;
+	color: #fff;
+	font-family:  'Archivo Black';
+	font-weight: bold;
+	text-decoration:none;
+}
+
+/* #menu{
+	text-align: right;
+	margin: 20px;
+    margin-top: -460px;
+	margin-right: 41px;
+	float: right;
+} */
+
+/* #menu {
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	padding: 0.5em 0;
+} */
+
+
+
+/* .nav a{
+	font-size: 17px;
+	padding: 30px;
+	color: #fff;
+	text-decoration: none;
+} */
+
+/* .nav a:hover{
+	color: #fff;
+}
+
+
+ul{
+	list-style: none;
+}
+
+.nav li a{
+	text-decoration: none;
+	padding: 10px 15px;
+	display: block;
+}
+
+.nav > li{
+	float: left;
+	text-align: left;
+}
+
+.nav li ul{
+	display: none;
+	position:fixed;
+	min-width: 140px;
+	background-color: rgba(245, 245, 220, 0.137);
+}
+
+.nav li:hover > ul{
+	display: block;
+} */
+
+/*PARTE NUEVA*/
+
+.primeraparte{
+	width: 80%;
+	margin-top: 50px;
+}
+
+.introduccion{
+	width: 45%;
+	display: inline-block;
+}
+
+.introduccion a{
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+
+.introduccion p{
+	font-size: 18px;
+	line-height: 2em;
+}
+
+.fotocordoba{
+	width: 45%;
+	margin-left: 92px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.tamaniofoto{
+	width: 100%;
+}
+
+.segundaparte{
+	margin-top: 50px;
+	height: 100vh;
+	background-image:url(../../../assets/img/sal1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    background-position: center;
+	opacity: 90%;
+}
+
+.fotocentrada{
+	
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.tamaniofoto1{
+	width: 100%;
+	margin-top: 55px;
+	margin-left: 100px;
+}
+
+
+.introduccion1{
+	width: 35%;
+	display: inline-block;
+	margin-left: 120px;
+}
+
+.introduccion1 h2{
+	margin-top: 20px;
+		
+}
+
+.introduccion1 p{
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: 2em;
+}
+
+.introduccion1 a{
+	text-decoration: none;
+	color: black;
+}
+
+.terceraparte{
+	width: 80%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.descuentos{
+	width: 45%;
+	display: inline-block;
+}
+
+.descuentos p{
+	font-size: 18px;
+	line-height: 2em;
+}
+
+.boton{
+	background-color: #76f06b;
+	margin-left:40%;
+	width: 100px;
+}
+.boton a{
+	text-decoration: none;
+	color: black;	
+}
+
+.cuartaparte{
+	margin-top: 50px;
+	height: 100vh;
+	background-image:url(../../../assets/img/DSC01229.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    background-position: center;
+	opacity: 90%;
+}
+
+.astro{
+	width: 35%;
+	display: inline-block;
+	margin-left: 120px;
+}
+
+.astro h2{
+	margin-top: 20px;
+	color: white;	
+}
+
+.astro p{
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: 2em;
+	color: white;
+}
+
+.astro a{
+	text-decoration: none;
+	color: white;
+}
+
+
+
+
+/*PARTE NUEVA*/
+
+#galeria{
+	width: 80%;
+	margin: 30px auto;
+}
+#galeria h3{
+    text-align: center;
+    margin: 20px ;
+}
+#caja p{
+    text-align: center;
+    
+    
+}
+#caja a{
+    text-decoration:none ;
+    font-weight: 500;
+    color: black;
+}
+
+#footerPagina{
+    width: 100%;
+background-color: black;
+color: white;
+}
+.container-footer-all{
+    width:100%;
+    max-width: 1200px;
+    margin: auto;
+	justify-content: space-between;
+
+}
+.container-body {
+display: flex;
+justify-content: space-between;
+
+}
+.column1, .column2, .column3{
+width: 33%; 
+}
+.column1 h1{
+font-size: 22px; 
+}
+.column1 p{
+    font-size: 14px; color: #C7C7C7; margin-top: 20px;
+}
+
+.cookies{
+	margin-top: 150px;
+}
+
+.cookies a{
+	text-decoration: none;
+}
+
+.column2 h1{
+    font-size: 22px;
+}
+.column2 .row1 {
+margin-top: 20px; display: flex;
+}
+.row1 img{
+    width: 36px; height: 36px;
+}
+.row1 label{ margin-top: 10px; margin-left: 20px; color: #C7C7C7;}
+
+.column3 h1{ font-size: 22px;}
+
+.row2{  margin-top: 10px; margin-left: 20px; color: #C7C7C7;}
+
+.row2 img{
+    width: 36px; height: 36px;}
+.container-footer img{
+    width: 36px; height: 36px;  
+}
+.container-footer{ margin-top: 10px; margin-left: 20px; color: #C7C7C7;}
+
+/* Responsive celular */
+@media screen and (max-width: 760px) {
+
+	body {
+		width: auto;
+	}
+	
+	#portada h1{
+		text-align: center;
+		letter-spacing: 0.1em;
+		font-size: 50px;
+		padding-top: 300px;
+		color: #fff;
+		font-family: 'Archivo Black';
+		font-weight: bold;
+		text-decoration:none;
+	}
+		
+	.nav li a{
+		text-decoration: none;
+		padding: 10px 15px;
+		display: block;
+	}	
+	.nav > li{
+		float: left;
+		text-align: left;
+	}	
+	.introduccion{
+		width: 100%;
+		text-align: center;
+	}
+	.fotocordoba{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.fotocentrada{	
+		width: 70%;
+		display: block;
+		margin-left: -50px;
+	}	
+	.tamaniofoto1{
+		width: 100%;
+	}	
+	.introduccion1, .astro{
+		width: 90%;		
+		margin-left: 10px;
+	}	
+	.introduccion1 h2{
+		font-size: 20px;
+		margin-top: 20px;			
+	}
+	.astro p{
+		line-height: 1.1em;
+	}	
+	.descuentos{
+		width: 100%;
+		display: inline-block;
+	}	
+	.boton{
+		background-color: #76f06b;
+		margin:0 0 10px 90px;
+		width: 100px;
+	}
+	.boton a{
+		text-decoration: none;
+		color: black;	
+	}
+	
+	/* footer */
+	.container-body {
+	display: block;
+	justify-content: space-between;
+	}
+	.column1, .column2, .column3{
+		width: 100%; 
+		margin: 0px 10px;
+	}
+	.column1 h1, .column2 h1, .column3 h1{
+		font-size: 22px; 
+		width: auto;
+	}
+	.column1 p, .container-footer-all label{
+		font-size: 13px;
+		color: #C7C7C7;
+		margin-top: 10px;
+	}
+
+	.cookies{
+		margin-top: 10px;
+	}
+	
+	
+	.row1 {
+		margin-top: 20px; 
+		display: flex;
+	}
+
+	.row1 img {
+		width: 25px; 
+		height: 25px;
+		margin-left: 10px;
+	}
+			
+	.row2{  
+		margin-top: 10px;
+		margin-left: 20px; 
+		color: #C7C7C7;}
+	
+	.row2 img{
+		width: 20px; 
+		height: 20px;
+		margin-left: -20px;
+	}
+	.row2 label {
+		font-size: 13px;
+	}
+	.container-footer img{
+		width: 36px; 
+		height: 36px;  
+	}
+	.container-footer{ 
+		text-align: center;
+		margin-top: 20px; 
+		margin-left: 20px; 
+		color: #C7C7C7;
+	}
+
+}
+
+/* Responsive tablet */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+	
+	#portada h1{
+		text-align: center;
+		letter-spacing: 0.1em;
+		font-size: 60px;
+		padding-top: 500px;
+		color: #fff;
+		font-family: 'Archivo Black';
+		font-weight: bold;
+		text-decoration:none;
+	}
+
+	#menu {
+		top: 100px;
+	}	
+	
+	.introduccion{
+		width: 100%;
+		text-align: center;
+	}
+
+	.fotocordoba{
+		width: 100%;
+		margin: 0 auto;
+	
+	}
+
+	.fotocentrada{	
+		width: 70%;
+		display: block;
+		margin-left: 10px;
+	}	
+	.tamaniofoto1{
+		width: 100%;
+	}	
+	.introduccion1, .astro{
+		width: 90%;		
+		margin-left: 100px;
+	}	
+	.introduccion1 h2, .astro h2, .descuentos h2{
+		font-size: 30px;
+		text-align: center;
+		margin-top: 20px;			
+	}
+	.introduccion1 p, .astro p, .descuentos p{
+		font-size: 25px;
+		margin-right: 60px;
+		text-align: center;
+	}
+
+	.introduccion1 a, .astro a{
+		font-size: 30px;
+	}
+
+	.astro p{
+		line-height: 1.8em;
+	}	
+	.descuentos{
+		width: 100%;
+		display: inline-block;
+	}	
+
+	.descuentos h2{
+
+	}
+	.boton{
+		background-color: #76f06b;
+		margin:0 0 20px 280px;
+		width: 100px;
+		
+	}
+	.boton a{
+		text-decoration: none;
+		color: black;	
+	}
+
+	
+
+	/* footer */
+	.container-body {
+	display: flex;
+	justify-content: space-between;
+	}
+	.column1, .column2, .column3{
+		margin: 10px;
+	}
+	.column1 h1, .column2 h1, .column3 h1{
+		font-size: 22px; 
+		width: auto;
+	}
+	.column1 p, .container-footer-all label{
+		font-size: 14px;
+		color: #C7C7C7;
+		margin-top: 10px;
+	}
+
+	.cookies{
+		margin-top: 50px;
+	}
+	
+	.row1 img {
+		width: 35px; 
+		height: 35px;
+		margin-left: 25px;
+	}
+	
+	.row2 img{
+		width: 20px; 
+		height: 20px;
+		margin-left: -25px;
+	}
+
+	.container-footer img{
+		width: 36px; 
+		height: 36px;  
+	}
+	.container-footer{ 
+		text-align: center; 
+		color: #C7C7C7;
+		margin-left: -15px;
+	}
+
+}
