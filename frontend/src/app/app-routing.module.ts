@@ -53,6 +53,7 @@ const routes: Routes = [
   {path: 'camino-del-vino', component:CaminoDelVinoComponent},
 
     // paquetes turisticos
+
   {path: 'paquete-turisticos', component: PaquetesTuristicosComponent},
   {path: 'paquete-turistico-la-cumbrecita', component: PaqueteTuristicoLaCumbrecitaComponent},
   {path: 'paquete-turistico-cba', component: PaqueteTuristicoCbaComponent},
