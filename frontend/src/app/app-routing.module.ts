@@ -17,7 +17,6 @@ import { Pagina404Component } from './vistas/pagina404/pagina404.component';
 import { SobreNosotrosComponent } from './vistas/sobre-nosotros/sobre-nosotros.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ContactoComponent } from './vistas/contacto/contacto.component';
-<<<<<<< HEAD
 import { PaquetesTuristicosComponent} from './vistas/paquetes-turisticos/paquetes-turisticos.component';
 import { PaqueteTuristicoLaCumbrecitaComponent } from './shop/paquete-turistico-la-cumbrecita/paquete-turistico-la-cumbrecita.component';
 import { PaqueteTuristicoCbaComponent } from './shop/paquete-turistico-cba/paquete-turistico-cba.component';
@@ -25,17 +24,6 @@ import { PaqueteTuristicoCpazComponent } from './shop/paquete-turistico-cpaz/paq
 import { PaqueteTuristicoTraslasierraComponent } from './shop/paquete-turistico-traslasierra/paquete-turistico-traslasierra.component';
 import { RegistroComponent } from './auth/registro/registro.component';
 
-=======
-
-import { PaquetesTuristicosComponent} from './vistas/paquetes-turisticos/paquetes-turisticos.component';
-
-import { PaqueteTuristicoLaCumbrecitaComponent } from './shop/paquete-turistico-la-cumbrecita/paquete-turistico-la-cumbrecita.component';
-import { PaqueteTuristicoCbaComponent } from './shop/paquete-turistico-cba/paquete-turistico-cba.component';
-import { PaqueteTuristicoCpazComponent } from './shop/paquete-turistico-cpaz/paquete-turistico-cpaz.component';
-import { PaqueteTuristicoTraslasierraComponent } from './shop/paquete-turistico-traslasierra/paquete-turistico-traslasierra.component';
-import { RegistroComponent } from './auth/registro/registro.component';
-
->>>>>>> Nico
 const routes: Routes = [
   //La siguiente linea funciona como index.html, sera la vista que cargara por defecto al entrar a la página
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -66,14 +54,7 @@ const routes: Routes = [
 
     // paquetes turisticos
 
-<<<<<<< HEAD
   {path: 'paquete-turisticos', component: PaquetesTuristicosComponent},
-=======
-
-
-  {path: 'paquete-turisticos', component: PaquetesTuristicosComponent},
-
->>>>>>> Nico
   {path: 'paquete-turistico-la-cumbrecita', component: PaqueteTuristicoLaCumbrecitaComponent},
   {path: 'paquete-turistico-cba', component: PaqueteTuristicoCbaComponent},
   {path: 'paquete-turistico-cpaz', component: PaqueteTuristicoCpazComponent},

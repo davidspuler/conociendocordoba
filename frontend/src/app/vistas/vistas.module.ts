@@ -70,8 +70,4 @@ import { PaquetesTuristicosComponent } from './paquetes-turisticos/paquetes-turi
     Pagina404Component
   ]
 })
-<<<<<<< HEAD
 export class VistasModule { }
-=======
-export class VistasModule { }
->>>>>>> Nico
