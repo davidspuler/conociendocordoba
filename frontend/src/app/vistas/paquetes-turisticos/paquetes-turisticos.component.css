@@ -12,6 +12,30 @@ margin-left: auto;
 margin-right: auto;
 }
 
+header{
+
+	height: 100vh;
+	background-image:url(src/assets/img/DSC03238.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    background-position: bottom;
+	
+}
+
+
+#portada h1{
+	text-align: center;
+	letter-spacing: 0.1em;
+	font-size: 100px;
+	padding-top: 230px;
+	color: #fff;
+	font-family:  'Archivo Black';
+	font-weight: bold;
+	text-decoration:none;
+}
+
+
 #menu {
 	position: absolute;
 	top: 30px;
@@ -58,51 +82,77 @@ ul{
 }
 
 /*PARTE NUEVA*/
-
-.primeraetapa{
-    width: 90%;
-    margin-top: 30px;
+.paquete{
+    text-decoration: none;
+    color: black;   
 }
 
-.carrusel1{
-    width: 58%;
+
+.oferta{
+	width: 80%;
+	margin-top: 25px;
     margin-bottom: 20px;
+    border:solid;
+    border-width: 1px;
+    border-radius: 10px;
 }
 
-.carrito1{
-    width: 40%;
-    float: right;
-    margin-top: -490px;
+.oferta a:hover{
+	color:black
+}
+
+.fotopaquete{
+	width: 30%;
+	margin-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 20px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.fotopaquete:hover{
+	transform: scale(1.05);
+}
+
+.anchofoto{
+	width: 100%;
+}
+
+.nombrepaquete{
+	width: 50%;
+    margin-top: 20px;
+	display: inline-block;
+}
+
+.nombrepaquete h2{
+	font-size: 16px;
+	line-height: 2em;
+}
+
+.nombrepaquete p{
+	font-size: 14px;
+	line-height: 1em;
+}
+
+.cuerpo{
+    padding-bottom: 20px;
+}
+
+.precio {
+    width: 10%;
     display: inline-block;
+    text-align: right;
+    margin-top: 20px;
+    vertical-align: top;
+}
+
+.negrita{ 
+    font-weight: bold;
 }
 
 
-.infogral{
-   border-top: solid;
-   border-bottom: solid;
-   padding-top: 10px;
-   margin-bottom: 10px;
-   border-color: rgb(148, 143, 143);
-    
-}   
 
-.a{
-    display: inline-block;
-    margin: 0 39px;
-}
-.size{
-    width: 15px;
-    height: 15px;   
-    display: inline-block;
-}
-
-.desc{
-    border-bottom: solid;
-    margin-bottom: 5px;
-    border-color: rgb(148, 143, 143);
-    padding-bottom: 10px;
-      
-}
 
 footer{
     width: 100%;
@@ -354,14 +404,10 @@ margin-top: 20px; display: flex;
 		display: inline-block;
 	}	
 
-	.descuentos h2{
-
-	}
 	.boton{
 		background-color: #76f06b;
 		margin:0 0 20px 280px;
-		width: 100px;
-		
+		width: 100px;	
 	}
 	.boton a{
 		text-decoration: none;
