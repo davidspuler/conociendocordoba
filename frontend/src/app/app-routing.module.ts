@@ -17,6 +17,7 @@ import { Pagina404Component } from './vistas/pagina404/pagina404.component';
 import { SobreNosotrosComponent } from './vistas/sobre-nosotros/sobre-nosotros.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ContactoComponent } from './vistas/contacto/contacto.component';
+import { PaquetesTuristicosComponent} from './vistas/paquetes-turisticos/paquetes-turisticos.component';
 import { PaqueteTuristicoLaCumbrecitaComponent } from './shop/paquete-turistico-la-cumbrecita/paquete-turistico-la-cumbrecita.component';
 import { PaqueteTuristicoCbaComponent } from './shop/paquete-turistico-cba/paquete-turistico-cba.component';
 import { PaqueteTuristicoCpazComponent } from './shop/paquete-turistico-cpaz/paquete-turistico-cpaz.component';
@@ -52,6 +53,8 @@ const routes: Routes = [
   {path: 'camino-del-vino', component:CaminoDelVinoComponent},
 
     // paquetes turisticos
+
+  {path: 'paquete-turisticos', component: PaquetesTuristicosComponent},
   {path: 'paquete-turistico-la-cumbrecita', component: PaqueteTuristicoLaCumbrecitaComponent},
   {path: 'paquete-turistico-cba', component: PaqueteTuristicoCbaComponent},
   {path: 'paquete-turistico-cpaz', component: PaqueteTuristicoCpazComponent},

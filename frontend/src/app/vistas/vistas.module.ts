@@ -18,6 +18,10 @@ import { ValleDeTraslasierrasComponent } from './valle-de-traslasierras/valle-de
 import { AppRoutingModule } from '../app-routing.module';
 import { Pagina404Component } from './pagina404/pagina404.component';
 
+import { PaquetesTuristicosComponent } from './paquetes-turisticos/paquetes-turisticos.component';
+
+
+
 
 
 @NgModule({
@@ -38,6 +42,9 @@ import { Pagina404Component } from './pagina404/pagina404.component';
     ValleDePunillaComponent,
     ValleDeTraslasierrasComponent,
     Pagina404Component,
+
+    PaquetesTuristicosComponent,
+
   ],
   imports: [
     CommonModule,
@@ -59,6 +66,7 @@ import { Pagina404Component } from './pagina404/pagina404.component';
     ValleDeParavachascaComponent,
     ValleDePunillaComponent,
     ValleDeTraslasierrasComponent,
+    PaquetesTuristicosComponent,
     Pagina404Component
   ]
 })
