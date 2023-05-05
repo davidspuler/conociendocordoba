@@ -22,7 +22,7 @@ header{
     background-position: bottom;
 }
 
-#portada h1{
+ h1{
 	text-align: center;
 	letter-spacing: 0.1em;
 	font-size: 100px;
@@ -31,6 +31,7 @@ header{
 	font-family:  'Archivo Black';
 	font-weight: bold;
 	text-decoration:none;
+    
 }
 
 #menu{
@@ -203,6 +204,7 @@ margin-top: 20px; display: flex;
 		font-family: 'Archivo Black';
 		font-weight: bold;
 		text-decoration:none;
+        background-image:url(../../../assets/img/DSC03704.jpg)
 	}
 		
 	.nav li a{
@@ -399,4 +401,15 @@ margin-top: 20px; display: flex;
 		margin-left: -15px;
 	}
 
+}
+
+#portada{
+
+	height: 100vh;
+	background-image:url( ../../../assets/img/DSC03704.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    background-position: bottom;
+	
 }
