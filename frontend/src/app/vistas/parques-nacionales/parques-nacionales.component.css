@@ -1,0 +1,415 @@
+html{
+	scroll-behavior: smooth;
+}
+
+
+header, footer {
+    width: 100%;
+    margin-right: auto;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+	height: 100vh;
+	background-image:url( ../../../assets/img/Balneario.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    background-position: bottom;
+}
+
+ h1{
+	text-align: center;
+	letter-spacing: 0.1em;
+	font-size: 100px;
+	padding-top: 230px;
+	color: #fff;
+	font-family:  'Archivo Black';
+	font-weight: bold;
+	text-decoration:none;
+    
+}
+
+#menu{
+	text-align: right;
+	margin: 20px;
+    margin-top: -160px;
+	margin-right: 20px;
+	float: right;
+    
+}
+
+.nav a{
+	font-size: 17px;
+	padding: 30px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav a:hover{
+	color: #fff;
+}
+
+
+ul{
+	list-style: none;
+}
+
+.nav li a{
+	text-decoration: none;
+	padding: 10px 15px;
+	display: block;
+}
+
+.nav > li{
+	float: left;
+	text-align: left;
+}
+
+.nav li ul{
+	display: none;
+	position:fixed;
+	min-width: 140px;
+}
+
+.nav li:hover > ul{
+	display: block;
+}
+
+.fotos{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.foto img {
+	margin: 20px auto;
+	width: 33%;
+	padding: 0 0.5em;
+	float: left;
+}
+
+.caja1{
+    font-size: 13px;
+    margin: 20px 0;
+	text-align: justify;
+}
+
+.caja2{
+    text-align: justify;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.info{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#slider{
+	width: 60%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.titulo_galeria {
+    text-align: center;
+}
+
+
+#clima{
+    margin-top: 65px;
+}
+
+
+#imagen_mapa{
+	margin: 10px auto;
+}
+
+footer{
+    width: 100%;
+background-color: black;
+color: white;
+}
+.container-footer-all{
+    width:100%;
+    max-width: 1200px;
+    margin: auto; justify-content: space-between;
+
+}
+.container-body {
+display: flex;justify-content: space-between;
+
+}
+
+.column1, .column2, .column3{
+	width: 33%; 
+}
+
+.column1 h1{
+font-size: 22px; 
+}
+.column1 p{
+    font-size: 14px; color: #C7C7C7; margin-top: 20px;
+}
+
+.cookies{
+	margin-top: 150px;
+}
+
+.cookies a{
+	text-decoration: none;
+}
+
+.column2 h1{
+    font-size: 22px;
+}
+.column2 .row1 {
+margin-top: 20px; display: flex;
+}
+.row1 img{
+    width: 36px; height: 36px;
+}
+.row1 label{ margin-top: 10px; margin-left: 20px; color: #C7C7C7;}
+
+
+.column3 h1{ font-size: 22px;}
+
+.row2{  margin-top: 10px; margin-left: 20px; color: #C7C7C7;}
+
+.row2 img{
+    width: 36px; height: 36px;}
+.container-footer img{
+    width: 36px; height: 36px;  
+}
+.container-footer{ margin-top: 10px; margin-left: 20px; color: #C7C7C7;}
+
+
+/* Responsive celular */
+@media screen and (max-width: 510px) {
+
+	body {
+		width: auto;
+	}
+	
+	#portada h1{
+		text-align: center;
+		letter-spacing: 0.1em;
+		font-size: 40px;
+		padding-top: 300px;
+		color: #fff;
+		font-family: 'Archivo Black';
+		font-weight: bold;
+		text-decoration:none;
+        background-image:url(../../../assets/img/DSC03704.jpg)
+	}
+		
+	.nav li a{
+		text-decoration: none;
+		padding: 10px 15px;
+		display: block;
+	}
+	
+	.nav > li{
+		float: left;
+		text-align: left;
+	}
+
+	.info {
+		width: 90%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.titulo_principal, .titulo_secundario {
+		text-align: center;
+	}
+	
+	#slider{
+		width: 100%;
+		margin: 30px auto;
+	}
+
+	.titulo_galeria {
+		text-align: center;
+	}
+
+	#clima {
+		width: 60%;
+		margin: 20px 150px 20px 0;
+	}
+
+	/* footer */
+	.container-body {
+	display: block;
+	justify-content: space-between;
+	}
+	.column1, .column2, .column3{
+		width: 100%; 
+		margin: 0px 10px;
+	}
+	.column1 h1, .column2 h1, .column3 h1{
+		font-size: 22px; 
+		width: auto;
+	}
+	.column1 p, .container-footer-all label{
+		font-size: 13px;
+		color: #C7C7C7;
+		margin-top: 10px;
+	}
+
+	.cookies{
+		margin-top: 10px;
+	}
+	
+	
+	.row1 {
+		margin-top: 20px; 
+		display: flex;
+	}
+
+	.row1 img {
+		width: 25px; 
+		height: 25px;
+		margin-left: 10px;
+	}
+			
+	.row2{  
+		margin-top: 10px;
+		margin-left: 20px; 
+		color: #C7C7C7;}
+	
+	.row2 img{
+		width: 20px; 
+		height: 20px;
+		margin-left: -20px;
+	}
+	.row2 label {
+		font-size: 13px;
+	}
+	.container-footer img{
+		width: 36px; 
+		height: 36px;  
+	}
+	.container-footer{ 
+		text-align: center;
+		margin-top: 20px; 
+		margin-left: 20px; 
+		color: #C7C7C7;
+	}
+
+}
+
+/* Responsive tablet */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+	
+	body {
+		width: auto;
+	}
+	
+	#portada h1{
+		text-align: center;
+		letter-spacing: 0.1em;
+		font-size: 60px;
+		padding-top: 400px;
+		color: #fff;
+		font-family: 'Archivo Black';
+		font-weight: bold;
+		text-decoration:none;
+	}
+		
+	.nav li a{
+		text-decoration: none;
+		padding: 10px 15px;
+		display: block;
+	}
+	
+	.nav > li{
+		float: left;
+		text-align: left;
+	}
+
+	.info {
+		width: 90%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.titulo_principal, .titulo_secundario {
+		text-align: center;
+	}
+	
+	#slider{
+		width: 100%;
+		margin: 30px auto;
+	}
+
+	.titulo_galeria {
+		text-align: center;
+	}
+
+	#clima {
+		width: 60%;
+		margin: 20px 150px 20px 0;
+	}
+
+	/* footer */
+	.container-body {
+	display: flex;
+	justify-content: space-between;
+	}
+	.column1, .column2, .column3{
+		margin: 10px;
+	}
+	.column1 h1, .column2 h1, .column3 h1{
+		font-size: 22px; 
+		width: auto;
+	}
+	.column1 p, .container-footer-all label{
+		font-size: 14px;
+		color: #C7C7C7;
+		margin-top: 10px;
+	}
+
+	.cookies{
+		margin-top: 50px;
+	}
+	
+	
+	.row1 img {
+		width: 35px; 
+		height: 35px;
+		margin-left: 25px;
+	}
+	
+	.row2 img{
+		width: 20px; 
+		height: 20px;
+		margin-left: -25px;
+	}
+
+	.container-footer img{
+		width: 36px; 
+		height: 36px;  
+	}
+	.container-footer{ 
+		text-align: center; 
+		color: #C7C7C7;
+		margin-left: -15px;
+	}
+
+}
+
+#portada{
+
+	height: 100vh;
+	background-image:url( ../../../assets/img/DSC03704.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    background-position: bottom;
+	
+}
