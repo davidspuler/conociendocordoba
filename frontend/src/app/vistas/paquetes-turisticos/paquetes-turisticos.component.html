@@ -1,3 +1,37 @@
+<section class="oferta"> 
+    
+    <div class="api">
+    <h2 class="title"> Api de prueba</h2>
+    <ul>
+        <li class="formato" *ngFor="let item of data">
+            {{ item.name }}
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="formato" *ngFor="let item of data2">
+            {{ item.name }}
+
+        </li>
+    </ul>
+
+    </div>   
+    
+</section>
+
+
+<!--<div>
+    <h2>Api Demo</h2>
+    <ul>
+        <li *ngFor="let item of data">
+            {{ item.name }}
+
+        </li>
+    </ul>
+
+</div>-->
+
 <section class="oferta"> <a class="paquete" [routerLink]="['/paquete-turistico-cpaz']">
     <div class="fotopaquete"> <img class="anchofoto" src="./assets/img/DSC07946.jpg" alt="Catedral de Córdoba">
     </div>
