@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 create database ConociendoCordoba;
 show databases;
 use ConociendoCordoba;
 drop database ConociendoCordoba;
+=======
+create database ConociendoCórdoba;
+show databases;
+use ConociendoCórdoba;
+drop database ConociendoCórdoba;
+>>>>>>> 1437a179a7064ae95340856038d7fceb685545a6
 
 CREATE TABLE Usuarios (
   idUsuario INT AUTO_INCREMENT PRIMARY KEY,
@@ -48,6 +55,30 @@ CREATE TABLE Productos (
   FOREIGN KEY (idAdmin) REFERENCES Administradores (idAdmin)
 );
 
+<<<<<<< HEAD
+=======
+CREATE TABLE Pedidos (
+  idPedido INT AUTO_INCREMENT PRIMARY KEY,
+  FechaPedido DATE NOT NULL,
+  EstadoPedido ENUM('Pendiente', 'En proceso', 'Entregado', 'Cancelado') NOT NULL,
+  idProducto INT NOT NULL,
+  idUsuario INT NOT NULL,
+  FOREIGN KEY (idProducto) REFERENCES Productos (idProducto),
+  FOREIGN KEY (idUsuario) REFERENCES Usuarios (idUsuario)
+);
+
+CREATE TABLE Carrito (
+  idPedido INT NOT NULL,
+  idProducto INT NOT NULL,
+  idUsuario INT NOT NULL,
+  Cantidad INT NOT NULL,
+  PrecioUnitario INT NOT NULL,
+  PrecioTotal INT NOT NULL,
+  PRIMARY KEY (idPedido, idProducto, idUsuario),
+  FOREIGN KEY (idPedido) REFERENCES Pedidos (idPedido),
+  FOREIGN KEY (idProducto) REFERENCES Productos (idProducto)
+);
+>>>>>>> 1437a179a7064ae95340856038d7fceb685545a6
 
 CREATE TABLE HistorialCompras (
   idHistorial INT AUTO_INCREMENT PRIMARY KEY,
@@ -61,6 +92,7 @@ CREATE TABLE HistorialCompras (
   FOREIGN KEY (idProducto) REFERENCES Productos (idProducto)
 );
 
+<<<<<<< HEAD
 CREATE TABLE Carrito (
   idCarrito INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   idProducto INT NOT NULL,
@@ -78,4 +110,12 @@ CREATE TABLE Facturas (
   FechaFactura DATE NOT NULL,
   MontoTotal INT NOT NULL,
   FOREIGN KEY (idCarrito) REFERENCES Carrito (idCarrito)
+=======
+CREATE TABLE Facturas (
+  idFactura INT AUTO_INCREMENT PRIMARY KEY,
+  idPedido INT NOT NULL,
+  FechaFactura DATE NOT NULL,
+  MontoTotal INT NOT NULL,
+  FOREIGN KEY (idPedido) REFERENCES Pedidos (idPedido)
+>>>>>>> 1437a179a7064ae95340856038d7fceb685545a6
 );
