@@ -82,6 +82,15 @@ ul{
 }
 
 /*PARTE NUEVA*/
+
+.title{
+	text-align: center;
+}
+
+.formato{
+	font-weight: bold ;
+}
+
 .paquete{
     text-decoration: none;
     color: black;   
