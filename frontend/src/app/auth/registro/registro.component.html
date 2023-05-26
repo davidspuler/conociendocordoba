@@ -30,7 +30,11 @@
                 </div>
                 <div *ngIf="name.errors?.['text']">
                   El nombre debe tener un formato válido.
-                </div>                
+                </div>     
+                <div *ngIf="name.errors?.['minlength']">
+                  El nombre debe tener un minimo de 3 caracteres.
+                </div>
+                
               </div>            
 
           </div>
@@ -52,7 +56,11 @@
               </div>
               <div *ngIf="surname.errors?.['text']">
                 El nombre debe tener un formato válido.
-              </div>                
+              </div> 
+              <div *ngIf="surname.errors?.['minlength']">
+                El apellido debe tener un minimo de 2 caracteres.
+              </div>
+              
             </div>          
 
           </div>
@@ -127,6 +135,11 @@
                   <div *ngIf="password.errors?.['required']">
                     La contraseña es requerida.
                   </div>
+
+                  <div *ngIf="password.errors?.['minlength']">
+                    La contraseña debe tener un minimo de 8 caracteres.
+                  </div>
+
                 </div>
           </div>
           <div class="d-grid mt-5">

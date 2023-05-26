@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm=this.formBuilder.group({
-    email:['nico@gmail.com', [Validators.required, Validators.email]],
-    password: ['', Validators.required],
+    email:['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(8)]],
   })
   
   constructor(private formBuilder:FormBuilder, private router:Router) { }

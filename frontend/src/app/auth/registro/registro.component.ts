@@ -10,11 +10,11 @@ import { Router } from '@angular/router';
 })
 export class RegistroComponent implements OnInit {
   registroForm=this.formBuilder.group({
-    name:['', Validators.required],
-    surname:['', Validators.required],
+    name:['', [Validators.required, Validators.minLength(3)]],
+    surname:['', [Validators.required, Validators.minLength(2)]],
     date:['', Validators.required],
     email:['', [Validators.required, Validators.email]],
-    password: ['', Validators.required],
+    password: ['', [Validators.required, Validators.minLength(8)]],
   })
   
   constructor(private formBuilder:FormBuilder, private router:Router) { }
