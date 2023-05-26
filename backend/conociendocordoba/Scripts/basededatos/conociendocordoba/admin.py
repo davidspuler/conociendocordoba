@@ -21,7 +21,7 @@ class AdminusuariosAdmin(admin.ModelAdmin):
 class CiudadesAdmin(admin.ModelAdmin):
     list_display = ("idciudad","nombreciudad",)
 class ProductosAdmin(admin.ModelAdmin):
-    list_display = ("idproducto", "nombreproducto", "descripcion", "fecha", "precio", "idciudad")
+    list_display = ("idproducto", "nombreproducto", "descripciongeneral", "fecha", "precio", "idusuario" ,"idciudad")
 class HistorialcomprasAdmin(admin.ModelAdmin):
     list_display = ("idhistorial", "idusuario", "fechacompra", "preciounitario","preciototal","estado")    
 class CarritoAdmin(admin.ModelAdmin):
@@ -42,5 +42,3 @@ admin.site.register(Productos,ProductosAdmin)
 admin.site.register(Carrito,CarritoAdmin)
 admin.site.register(Historialcompras,HistorialcomprasAdmin)
 admin.site.register(Facturas,FacturasAdmin)
-
-
