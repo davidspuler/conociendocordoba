@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { VistasModule } from './vistas/vistas.module';
 import { ShopModule } from './shop/shop.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     VistasModule,
     ShopModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

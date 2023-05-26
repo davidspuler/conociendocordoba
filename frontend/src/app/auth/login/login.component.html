@@ -1,3 +1,82 @@
+
+<div class="container position-relative">
+  <div class="row vh-100 d-flex justify-content-center align-items-center">
+    <div class="col-12 text-center">
+      <h1>Bienvenido a Conociendo Córdoba</h1>
+    </div>
+    <div class="col-12 col-md-4">
+      <form [formGroup]="loginForm" class="border p-3">
+        <fieldset>
+          <legend class="text-center fs-1"></legend>
+          <div class="row">
+            <div class="col-4 mx-auto">
+              <img
+                src="/assets/img/profile.svg"
+                class="img-thumbnail"
+
+               alt=""
+                srcset=""
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              formControlName="email"
+              type="text"
+              id="email"
+              class="form-control"
+              placeholder="example@gmail.com"
+            />
+
+              <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                  class="text-danger">
+
+                <div *ngIf="email.errors?.['required']">
+                  Email es requerido.
+                </div>
+                <div *ngIf="email.errors?.['email']">
+                  El Email debe tener un formato válido.
+                </div>
+              </div>
+
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input
+              formControlName="password"
+              type="password"
+              id="password"
+              class="form-control"
+              placeholder="password123"
+            />
+
+              <div *ngIf="password.invalid && (password.dirty || password.touched)"
+                  class="text-danger">
+
+                <div *ngIf="password.errors?.['required']">
+                  La contraseña es requerida.
+                </div>
+              </div>
+
+          </div>
+          <div class="d-grid mb-3 mt-5">
+            <button type="submit" (click)="login()" class="btn btn-success fw-bold">
+              Enviar
+            </button>
+          </div>
+        </fieldset>
+        <p>¿No tienes cuenta?</p>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-warning fw-bold">
+            <a class="nav-link" [routerLink]="['/registro']">Registrate</a>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 <div class="container position-relative">
   <div class="row vh-100 d-flex justify-content-center align-items-center">
     <div class="col-12 text-center">
