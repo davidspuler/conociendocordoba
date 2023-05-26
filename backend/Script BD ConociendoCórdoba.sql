@@ -1,7 +1,7 @@
 create database ConociendoCórdoba;
-show databases;
+
 use ConociendoCórdoba;
-drop database ConociendoCórdoba;
+
 
 CREATE TABLE Usuarios (
   idUsuario INT AUTO_INCREMENT PRIMARY KEY,
@@ -44,29 +44,21 @@ CREATE TABLE Productos (
   Precio INT NOT NULL,
   idCiudad INT NOT NULL,
   idAdmin INT NOT NULL,
+  idUsuario INT NOT NULL,
+  FOREIGN KEY (idUsuario) REFERENCES Usuarios (idUsuario),
   FOREIGN KEY (idCiudad) REFERENCES Ciudades (idCiudad),
   FOREIGN KEY (idAdmin) REFERENCES Administradores (idAdmin)
 );
 
-CREATE TABLE Pedidos (
-  idPedido INT AUTO_INCREMENT PRIMARY KEY,
-  FechaPedido DATE NOT NULL,
-  EstadoPedido ENUM('Pendiente', 'En proceso', 'Entregado', 'Cancelado') NOT NULL,
-  idProducto INT NOT NULL,
-  idUsuario INT NOT NULL,
-  FOREIGN KEY (idProducto) REFERENCES Productos (idProducto),
-  FOREIGN KEY (idUsuario) REFERENCES Usuarios (idUsuario)
-);
 
 CREATE TABLE Carrito (
-  idPedido INT NOT NULL,
+  idCarrito INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   idProducto INT NOT NULL,
   idUsuario INT NOT NULL,
   Cantidad INT NOT NULL,
   PrecioUnitario INT NOT NULL,
   PrecioTotal INT NOT NULL,
-  PRIMARY KEY (idPedido, idProducto, idUsuario),
-  FOREIGN KEY (idPedido) REFERENCES Pedidos (idPedido),
+  FOREIGN KEY (idUsuario) REFERENCES Usuarios (idUsuario),
   FOREIGN KEY (idProducto) REFERENCES Productos (idProducto)
 );
 
@@ -84,8 +76,8 @@ CREATE TABLE HistorialCompras (
 
 CREATE TABLE Facturas (
   idFactura INT AUTO_INCREMENT PRIMARY KEY,
-  idPedido INT NOT NULL,
+  idCarrito INT NOT NULL,
   FechaFactura DATE NOT NULL,
   MontoTotal INT NOT NULL,
-  FOREIGN KEY (idPedido) REFERENCES Pedidos (idPedido)
+  FOREIGN KEY (idCarrito) REFERENCES Carrito (idCarrito)
 );
