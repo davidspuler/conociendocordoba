@@ -10,6 +10,8 @@ export class PaquetesTuristicosComponent {
 
   data: any[] = [];
   data2: any[] = [];
+  dataSofia: any[] = [];
+  dataApi: any[] = [];
 
 
   constructor (private apiService: ApiService) {}
@@ -17,6 +19,8 @@ export class PaquetesTuristicosComponent {
   ngOnInit():void{
     this.llenarData()
     this.llenarData2()
+    this.llenarDataSofia()
+    this.llenarApi()
   }
 
   llenarData(){
@@ -29,6 +33,18 @@ export class PaquetesTuristicosComponent {
   llenarData2(){
     this.apiService.getDataVarios("3,4").subscribe( data => {
       this.data2= data;
+    })
+  }
+
+  llenarDataSofia(){
+    this.apiService.getDataVarios("5,6").subscribe( data => {
+      this.dataSofia= data;
+    })
+  }
+
+  llenarApi(){
+    this.apiService.getDataVarios("7,8,9").subscribe( data => {
+      this.dataApi= data;
     })
   }
 
