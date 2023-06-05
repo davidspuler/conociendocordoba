@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-f)l*y&&*zmtfdbiclxi*!a)lqrtakmmcc6x&8w%a^d4)^wbk%x'
+SECRET_KEY = 'django-insecure-85=a=4tf6_5*9nxsxx3w&^@3xj8$yuix%)mnbh652$8b)%k77%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'conociendocordoba',
+    'rest_framework',
+    'corsheaders',
+    'authentication',
 ]
 
 MIDDLEWARE = [
@@ -48,7 +51,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
+
+
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:4200',
+    ]
+
 
 ROOT_URLCONF = 'basededatos.urls'
 
@@ -75,15 +87,16 @@ WSGI_APPLICATION = 'basededatos.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+  'default': {
+        'ENGINE': 'django.db.backends.mysql',
         'ENGINE': 'django.db.backends.mysql',
          'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'conociendocordoba',
+        'NAME': 'conociendocórdoba',
         'USER': 'root',
         'PASSWORD' : '155361232',
         'HOST' : 'localhost',
         'PORT' : 3306,
-        'OPTIONS': {
+         'OPTIONS': {
             'sql_mode' : 'traditional',
         }
     }
@@ -130,3 +143,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AUTH_USER_MODEL = "authentication.CustomUser"

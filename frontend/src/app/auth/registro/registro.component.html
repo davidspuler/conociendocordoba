@@ -1,10 +1,10 @@
 <div class="container">
-  <div class="row vh-100 d-flex justify-content-center align-items-center">
+  <div class="row vh-500 d-flex justify-content-center align-items-center">
     <div class="col-12 text-center">
       <h1>Bienvenido a Conociendo Córdoba</h1>
     </div>
-    <div class="col-12 col-md-4">
-      <form class="border p-3">
+    <div class="col-12 col-md-4" style="margin-bottom: 25px;">
+      <form [formGroup]="registroForm" class="border p-3">
         <fieldset>
           <legend class="text-center fs-1"></legend>
          <div class="row">
@@ -15,32 +15,79 @@
           <div class="mb-3">
             <label for="name" class="form-label ">Nombre</label>
             <input
+              formControlName="name"
               type="text"
               id="name"
               class="form-control"
               placeholder="Elon"
             />
+
+              <div *ngIf="name.invalid && (name.dirty || name.touched)" 
+              class="text-danger">
+
+                <div *ngIf="name.errors?.['required']">
+                  El nombre es requerido.
+                </div>
+                <div *ngIf="name.errors?.['text']">
+                  El nombre debe tener un formato válido.
+                </div>     
+                <div *ngIf="name.errors?.['minlength']">
+                  El nombre debe tener un minimo de 3 caracteres.
+                </div>
+                
+              </div>            
+
           </div>
           <div class="mb-3">
             <label for="apellido" class="form-label ">Apellido</label>
             <input
+              formControlName="surname"
               type="text"
               id="apellido"
               class="form-control"
               placeholder="Musk"
             />
+
+            <div *ngIf="surname.invalid && (surname.dirty || surname.touched)" 
+            class="text-danger">
+
+              <div *ngIf="surname.errors?.['required']">
+                El nombre es requerido.
+              </div>
+              <div *ngIf="surname.errors?.['text']">
+                El nombre debe tener un formato válido.
+              </div> 
+              <div *ngIf="surname.errors?.['minlength']">
+                El apellido debe tener un minimo de 2 caracteres.
+              </div>
+              
+            </div>          
+
           </div>
           <div class="mb-3">
             <label for="fecha de nacimiento" class=""
               >Fecha de nacimiento</label
             >
             <input
+              formControlName="date"
               type="date"
               id="fecha de nacimiento"
               class="form-control"
               min="1930-01-01"
               max="2023-12-31"
             />
+
+            <div *ngIf="date.invalid && (date.dirty || date.touched)" 
+            class="text-danger">
+
+              <div *ngIf="date.errors?.['required']">
+                El nombre es requerido.
+              </div>
+              <div *ngIf="date.errors?.['date']">
+                El nombre debe tener un formato válido.
+              </div>                
+            </div>          
+
           </div>
           <div class="mb-3">
             <label for="genero" class="">Género</label>
@@ -56,23 +103,47 @@
               >Correo electrónico</label
             >
             <input
+              formControlName="email"
               type="email"
               id="email"
               class="form-control"
               placeholder="example@gmail.com"
             />
+              <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                    class="text-danger">
+
+                  <div *ngIf="email.errors?.['required']">
+                    Email es requerido.
+                  </div>
+                  <div *ngIf="email.errors?.['email']">
+                    El Email debe tener un formato válido.
+                  </div>
+                </div>
           </div>
           <div class="mb-3">
             <label for="password" class="form-label ">Contraseña</label>
             <input
+            formControlName="password"
               type="password"
               id="password"
               class="form-control"
               placeholder="password123"
             />
+                <div *ngIf="password.invalid && (password.dirty || password.touched)"
+                class="text-danger">
+
+                  <div *ngIf="password.errors?.['required']">
+                    La contraseña es requerida.
+                  </div>
+
+                  <div *ngIf="password.errors?.['minlength']">
+                    La contraseña debe tener un minimo de 8 caracteres.
+                  </div>
+
+                </div>
           </div>
           <div class="d-grid mt-5">
-            <button type="submit" class="btn btn-success fw-bold">Enviar</button>
+            <button type="submit" (click)="registro()" class="btn btn-success fw-bold">Enviar</button>
           </div>
         </fieldset>
       </form>
