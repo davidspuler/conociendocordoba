@@ -1,4 +1,4 @@
-from authentication.views import LoginView, LogoutView , SignupView
+from authentication.views import LoginView, LogoutView , SignupView, UsuariosView, UsuariosLoginView
 from django.urls import path, include
 
 
@@ -13,6 +13,12 @@ urlpatterns = [
      
      path('auth/signup/',
          SignupView.as_view(), name='auth_signup'),
+
+     path('usuario/register/',
+         UsuariosView.as_view(), name='register'),
+
+     path('usuario/login/',
+         UsuariosLoginView.as_view(), name='login'),
     ]
 
 

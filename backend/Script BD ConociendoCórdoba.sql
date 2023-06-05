@@ -2,6 +2,17 @@ create database conociendocórdoba;
 
 use conociendocórdoba;
 
+CREATE TABLE Usuario (
+  idUsuario INT AUTO_INCREMENT PRIMARY KEY,
+  Nombre VARCHAR(150) NOT NULL,
+  Apellido VARCHAR(150) NOT NULL,
+  FechaNacimiento DATE NOT NULL,
+  CorreoElectronico VARCHAR(150) NOT NULL,
+  admin boolean NOT NULL,
+  password VARCHAR(150) NOT NULL,
+  login boolean NOT NULL
+);
+
 CREATE TABLE Ciudades (
   idCiudad INT AUTO_INCREMENT PRIMARY KEY,
   NombreCiudad VARCHAR(150) NOT NULL
