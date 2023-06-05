@@ -1,39 +1,5 @@
 from django.db import models
 
-class Usuarios(models.Model):
-    idusuario = models.AutoField(db_column='idUsuario', primary_key=True)  # Field name made lowercase.
-    nombre = models.CharField(db_column='Nombre', max_length=150)  # Field name made lowercase.
-    apellido = models.CharField(db_column='Apellido', max_length=150)  # Field name made lowercase.
-    fechanacimiento = models.DateField(db_column='FechaNacimiento')  # Field name made lowercase.
-    correoelectronico = models.CharField(db_column='CorreoElectronico', max_length=150)  # Field name made lowercase.
-    genero = models.CharField(db_column='Genero', max_length=9)  # Field name made lowercase.
-    contraseña = models.CharField(db_column='Contraseña', max_length=150)  # Field name made lowercase.
-
-    class Meta:
-        managed = False
-        db_table = 'usuarios'
-        
-class Administradores(models.Model):
-    idadmin = models.AutoField(db_column='idAdmin', primary_key=True)  # Field name made lowercase.
-    nombre = models.CharField(db_column='Nombre', max_length=150)  # Field name made lowercase.
-    apellido = models.CharField(db_column='Apellido', max_length=150)  # Field name made lowercase.
-    fechanacimiento = models.DateField(db_column='FechaNacimiento')  # Field name made lowercase.
-    correoelectronico = models.CharField(db_column='CorreoElectronico', max_length=150)  # Field name made lowercase.
-    genero = models.CharField(db_column='Genero', max_length=9)  # Field name made lowercase.
-    contraseña = models.CharField(db_column='Contraseña', max_length=150)  # Field name made lowercase.
-
-    class Meta:
-        managed = False
-        db_table = 'administradores'
-        
-class Adminusuarios(models.Model):
-    idadmin = models.OneToOneField(Administradores, models.DO_NOTHING, db_column='idAdmin', primary_key=True)  # Field name made lowercase. The composite primary key (idAdmin, idUsuario) found, that is not supported. The first column is selected.
-    idusuario = models.ForeignKey('Usuarios', models.DO_NOTHING, db_column='idUsuario')  # Field name made lowercase.
-
-    class Meta:
-        managed = False
-        db_table = 'adminusuarios'
-        unique_together = (('idadmin', 'idusuario'),)
 
 class Ciudades(models.Model):
     idciudad = models.AutoField(db_column='idCiudad', primary_key=True)  # Field name made lowercase.
@@ -42,7 +8,9 @@ class Ciudades(models.Model):
     class Meta:
         managed = False
         db_table = 'ciudades'
-        
+
+
+
 class Productos(models.Model):
     idproducto = models.AutoField(db_column='idProducto', primary_key=True)  # Field name made lowercase.
     nombreproducto = models.CharField(db_column='NombreProducto', max_length=150)  # Field name made lowercase.
@@ -50,15 +18,14 @@ class Productos(models.Model):
     fecha = models.DateField(db_column='Fecha')  # Field name made lowercase.
     precio = models.IntegerField(db_column='Precio')  # Field name made lowercase.
     idciudad = models.ForeignKey(Ciudades, models.DO_NOTHING, db_column='idCiudad')  # Field name made lowercase.
-    idadmin = models.ForeignKey(Administradores, models.DO_NOTHING, db_column='idAdmin')  # Field name made lowercase.
 
     class Meta:
         managed = False
         db_table = 'productos'
-
+        
+        
 class Historialcompras(models.Model):
     idhistorial = models.AutoField(db_column='idHistorial', primary_key=True)  # Field name made lowercase.
-    idusuario = models.ForeignKey('Usuarios', models.DO_NOTHING, db_column='idUsuario')  # Field name made lowercase.
     idproducto = models.ForeignKey('Productos', models.DO_NOTHING, db_column='idProducto')  # Field name made lowercase.
     fechacompra = models.DateField(db_column='FechaCompra')  # Field name made lowercase.
     preciounitario = models.IntegerField(db_column='PrecioUnitario')  # Field name made lowercase.
@@ -68,12 +35,10 @@ class Historialcompras(models.Model):
     class Meta:
         managed = False
         db_table = 'historialcompras'
-
+        
 class Carrito(models.Model):
-    
     idcarrito = models.AutoField(db_column='idCarrito', primary_key=True)  # Field name made lowercase.
     idproducto = models.ForeignKey('Productos', models.DO_NOTHING, db_column='idProducto')  # Field name made lowercase.
-    idusuario = models.ForeignKey('Usuarios', models.DO_NOTHING, db_column='idUsuario')  # Field name made lowercase.
     cantidad = models.IntegerField(db_column='Cantidad')  # Field name made lowercase.
     preciounitario = models.IntegerField(db_column='PrecioUnitario')  # Field name made lowercase.
     preciototal = models.IntegerField(db_column='PrecioTotal')  # Field name made lowercase.
@@ -81,7 +46,11 @@ class Carrito(models.Model):
     class Meta:
         managed = False
         db_table = 'carrito'
-        
+
+
+
+
+
 class Facturas(models.Model):
     idfactura = models.AutoField(db_column='idFactura', primary_key=True)  # Field name made lowercase.
     idcarrito = models.ForeignKey(Carrito, models.DO_NOTHING, db_column='idCarrito')  # Field name made lowercase.
@@ -91,3 +60,7 @@ class Facturas(models.Model):
     class Meta:
         managed = False
         db_table = 'facturas'
+
+
+
+
