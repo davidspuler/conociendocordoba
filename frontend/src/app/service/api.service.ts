@@ -6,20 +6,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-
-  private urlApi = 'https://rickandmortyapi.com/api/character/1,183';
-  private urlApiVarios = 'https://rickandmortyapi.com/api/character/';
-
+  
+  private apiUrl = 'http://127.0.0.1:8000/api/v1Productos/';
+    
   constructor(private http: HttpClient) { }
 
-  public getData(): Observable<any> {
-    return this.http.get<any>(this.urlApi);
-
+  getProducts(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
   }
-
-  public getDataVarios(ids: string): Observable<any> {
-    return this.http.get<any>(this.urlApiVarios + ids);
-  }
+  
 
   public createUsuario(Nombre:string, Apellido: string, FechaNacimiento: Date, CorreoElectronico: string, 
     password: string): Observable<any> {

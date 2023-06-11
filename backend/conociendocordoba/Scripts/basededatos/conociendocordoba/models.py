@@ -17,6 +17,7 @@ class Productos(models.Model):
     descripcion = models.CharField(db_column='Descripcion', max_length=500)  # Field name made lowercase.
     fecha = models.DateField(db_column='Fecha')  # Field name made lowercase.
     precio = models.IntegerField(db_column='Precio')  # Field name made lowercase.
+    imagen = models.ImageField(upload_to='img-basededatos/', blank=True, null=True)
     idciudad = models.ForeignKey(Ciudades, models.DO_NOTHING, db_column='idCiudad')  # Field name made lowercase.
 
     class Meta:

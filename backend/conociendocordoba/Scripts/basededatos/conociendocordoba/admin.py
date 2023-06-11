@@ -13,7 +13,7 @@ from .models import Facturas
 class CiudadesAdmin(admin.ModelAdmin):
     list_display = ("idciudad","nombreciudad",)
 class ProductosAdmin(admin.ModelAdmin):
-    list_display = ("idproducto", "nombreproducto", "descripcion", "fecha", "precio" ,"idciudad")
+    list_display = ("idproducto", "nombreproducto", "descripcion", "fecha", "precio" , "imagen", "idciudad")
 class HistorialcomprasAdmin(admin.ModelAdmin):
     list_display = ("idhistorial" ,"idproducto", "fechacompra", "preciounitario","preciototal","estado")    
 class CarritoAdmin(admin.ModelAdmin):
