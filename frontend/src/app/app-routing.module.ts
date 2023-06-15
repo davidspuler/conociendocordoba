@@ -23,6 +23,7 @@ import { PaqueteTuristicoCbaComponent } from './shop/paquete-turistico-cba/paque
 import { PaqueteTuristicoCpazComponent } from './shop/paquete-turistico-cpaz/paquete-turistico-cpaz.component';
 import { PaqueteTuristicoTraslasierraComponent } from './shop/paquete-turistico-traslasierra/paquete-turistico-traslasierra.component';
 import { RegistroComponent } from './auth/registro/registro.component';
+import { CarritoComponent } from './vistas/carrito/carrito.component';
 
 const routes: Routes = [
   //La siguiente linea funciona como index.html, sera la vista que cargara por defecto al entrar a la página
@@ -59,6 +60,7 @@ const routes: Routes = [
   {path: 'paquete-turistico-cba', component: PaqueteTuristicoCbaComponent},
   {path: 'paquete-turistico-cpaz', component: PaqueteTuristicoCpazComponent},
   {path: 'paquete-turistico-traslasierra', component: PaqueteTuristicoTraslasierraComponent},
+  { path: 'carrito', component: CarritoComponent },
 
   //vista 404 en caso de que la pagina solicitada no exista
   {path: '**', component:Pagina404Component},

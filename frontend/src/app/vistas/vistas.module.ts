@@ -19,6 +19,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { Pagina404Component } from './pagina404/pagina404.component';
 
 import { PaquetesTuristicosComponent } from './paquetes-turisticos/paquetes-turisticos.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 
 
@@ -44,6 +45,7 @@ import { PaquetesTuristicosComponent } from './paquetes-turisticos/paquetes-turi
     Pagina404Component,
 
     PaquetesTuristicosComponent,
+      CarritoComponent,
 
   ],
   imports: [

@@ -7,13 +7,26 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   
-  private apiUrl = 'http://127.0.0.1:8000/api/v1Productos/';
-    
+  private apiUrl = 'http://127.0.0.1:8000/api/v1productos/';
+  private carrito: any[] = [];
   constructor(private http: HttpClient) { }
 
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
+  
+  addToCart(producto: any) {
+    this.carrito.push(producto);
+  }
+
+  getCart(): any[] {
+    return this.carrito;
+  }
+
+  clearCart() {
+    this.carrito = [];
+  }
+
   
 
   public createUsuario(Nombre:string, Apellido: string, FechaNacimiento: Date, CorreoElectronico: string, 
