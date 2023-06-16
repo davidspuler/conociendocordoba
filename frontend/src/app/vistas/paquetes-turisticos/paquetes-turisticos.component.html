@@ -31,12 +31,9 @@
     <p> fecha: {{ producto.fecha }}</p>
     <p>Idioma: Ingles, Español</p>
     <p>Modalidad: Cancelacion Gratuita</p>
-    <div class="ubicacion">
-        <button type="submit" class="btn btn-primary boton" (click)="agregarAlCarrito(producto)">Agregar al carrito</button>
-        <button type="submit" class="btn btn-primary boton1" [routerLink]="['/paquete-turistico-la-cumbrecita']">Descripción</button>
-    </div>
-
     
+
+    <button type="submit" class="btn btn-primary boton"(click)="agregarAlCarrito(producto)">Agregar al carrito</button>
    
         </div>       
         </ng-container>
@@ -49,7 +46,7 @@
             </div>       
             </ng-container>
     </div>   
-    
+   
 </section>
 
 
