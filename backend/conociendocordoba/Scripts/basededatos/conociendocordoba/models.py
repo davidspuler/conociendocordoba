@@ -21,6 +21,7 @@ class Productos(models.Model):
     imagen = models.ImageField(upload_to='img-basededatos/', blank=True, null=True)
     idciudad = models.ForeignKey(Ciudades, models.DO_NOTHING, db_column='idCiudad')  # Field name made lowercase.
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    cantidad = models.IntegerField(default=0)
     class Meta:
         managed = False
         db_table = 'productos'

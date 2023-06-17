@@ -3,10 +3,11 @@
 <div *ngIf="productos.length > 0; else emptyCart">
   <ul>
     <li *ngFor="let producto of productos">
-      {{ producto.nombreproducto }} - {{ producto.precio }}
+      {{ producto.nombreproducto }} - {{ producto.precio }} - {{ producto.idproducto}}
     </li>
   </ul>
   <button (click)="vaciarCarrito()">Vaciar carrito</button>
+  <button type="button" (click)="comprar()">Comprar</button>
 </div>
 
 <ng-template #emptyCart>

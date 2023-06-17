@@ -17,3 +17,16 @@ ADD CONSTRAINT fk_productos_usuario
 FOREIGN KEY (usuario_id)
 REFERENCES Usuario(idUsuario)
 ON DELETE CASCADE;
+
+
+SELECT * FROM factura;
+
+
+SELECT * FROM facturas;
+SELECT * FROM Productos;
+ALTER TABLE Productos;
+UPDATE Productos
+SET cantidad = cantidad + 1
+WHERE idproducto = 9;
+
+ALTER TABLE Productos ADD COLUMN cantidad INT DEFAULT 0;

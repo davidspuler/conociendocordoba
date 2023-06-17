@@ -1,10 +1,50 @@
 from rest_framework import viewsets
-from .serializer import  ProductosSerializer 
-from .models import Productos
+from .serializer import ProductosSerializer
+from .models import Productos, Carrito, Facturas
 from django.shortcuts import redirect, render
 from rest_framework.response import Response
+from django.http import JsonResponse
+from datetime import date
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.decorators import api_view
 
 
+
+@api_view(['GET', 'POST'])
+@csrf_exempt
+def simular_compra(request, producto_id, cantidad):
+    # Obtener detalles del producto desde la base de datos
+    producto = Productos.objects.get(idproducto=producto_id)
+    
+    # Calcular precios y monto total
+    precio_unitario = producto.precio
+    precio_total = precio_unitario * cantidad
+    
+    # Crear registro en la tabla Carrito
+    carrito = Carrito.objects.create(
+        idproducto=producto,
+        cantidad=cantidad,
+        preciounitario=precio_unitario,
+        preciototal=precio_total
+    )
+    
+    # Generar factura asociada al carrito
+    factura = Facturas.objects.create(
+        idcarrito=carrito,
+        fechafactura=date.today(),
+        montototal=precio_total
+    )
+    
+    # Preparar la respuesta JSON
+    confirmacion = {
+    'id_factura': factura.idfactura,
+    'fecha_emision': factura.fechafactura,
+    'monto_total': factura.montototal,
+    'cantidad_productos': cantidad
+}
+    
+    # Devolver la confirmación como respuesta JSON
+    return JsonResponse(confirmacion)
 
 class ProductosViewSet(viewsets.ModelViewSet):
         queryset=Productos.objects.all()
@@ -26,5 +66,9 @@ def perform_destroy(self, instance):
 
 def perform_update(self, serializer):
         serializer.save()
+
+
+
+
 
 
