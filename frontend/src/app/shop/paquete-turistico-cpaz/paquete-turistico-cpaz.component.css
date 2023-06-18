@@ -76,6 +76,9 @@ ul{
     display: inline-block;
 }
 
+.boton{
+	margin-right: 15px;
+}
 
 .infogral{
    border-top: solid;
