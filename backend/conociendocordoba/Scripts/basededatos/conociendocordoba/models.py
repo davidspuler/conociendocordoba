@@ -34,6 +34,7 @@ class Historialcompras(models.Model):
     preciounitario = models.IntegerField(db_column='PrecioUnitario')  # Field name made lowercase.
     preciototal = models.IntegerField(db_column='PrecioTotal')  # Field name made lowercase.
     estado = models.CharField(db_column='Estado', max_length=10)  # Field name made lowercase.
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 
     class Meta:
         managed = False

@@ -21,7 +21,7 @@
 -->
 
 <section class="oferta"> 
-    <div class="fotopaquete"> <img class="anchofoto" src="./assets/img/DSC07946.jpg" alt="Catedral de Córdoba">
+    <div class="fotopaquete"> <img class="anchofoto" src="./assets/img/DSC07946.jpg" alt="Carlos_Paz">
     </div>
     <div class="nombrepaquete" *ngIf="productos">
         <ng-container *ngFor="let producto of productos">
@@ -34,6 +34,7 @@
     
 
     <button type="submit" class="btn btn-primary boton"(click)="agregarAlCarrito(producto)">Agregar al carrito</button>
+    <button type="submit" class="btn btn-primary boton1" [routerLink]="['/paquete-turistico-cpaz']">Descripción</button>
    
         </div>       
         </ng-container>
@@ -53,7 +54,7 @@
 <!--src="./assets/img/la cumbrecita.jpg-->
 
 <section class="oferta">>
-    <div class="fotopaquete"> <img class="anchofoto" src="./assets/img/la cumbrecita.jpg" alt="Catedral de Córdoba">
+    <div class="fotopaquete"> <img class="anchofoto" src="./assets/img/la cumbrecita.jpg" alt="la-cumbrecita">
     </div>
     <div class="nombrepaquete" *ngIf="productos">
         <ng-container *ngFor="let producto of productos">
@@ -64,6 +65,8 @@
     <p>Idioma: Ingles, Español</p>
     <p>Modalidad: Cancelacion Gratuita</p>
     <button type="submit" class="btn btn-primary boton"(click)="agregarAlCarrito(producto)">Agregar al carrito</button>
+    <button type="submit" class="btn btn-primary boton1" [routerLink]="['/paquete-turistico-la-cumbrecita']">Descripción</button>
+
         </div>       
         </ng-container>
     </div>
@@ -92,6 +95,8 @@
 <p>Idioma: Ingles, Español</p>
 <p>Modalidad: Cancelacion Gratuita</p>
 <button type="submit" class="btn btn-primary boton"(click)="agregarAlCarrito(producto)">Agregar al carrito</button>
+<button type="submit" class="btn btn-primary boton1" [routerLink]="['/paquete-turistico-cba']">Descripción</button>
+
     </div>       
     </ng-container>
 </div>
@@ -109,7 +114,7 @@
 <!--PARTE NUEVA 3-->
 
 <section class="oferta">
-<div class="fotopaquete"> <img class="anchofoto" src="./assets/img/Nacimiento del rio Mina Clavero.jpg" alt="Catedral de Córdoba">
+<div class="fotopaquete"> <img class="anchofoto" src="./assets/img/Nacimiento del rio Mina Clavero.jpg" alt="traslasierra">
 </div>
 <div class="nombrepaquete" *ngIf="productos">
     <ng-container *ngFor="let producto of productos">
@@ -120,6 +125,7 @@
 <p>Idioma: Ingles, Español</p>
 <p>Modalidad: Cancelacion Gratuita</p>
 <button type="submit" class="btn btn-primary boton"(click)="agregarAlCarrito(producto)">Agregar al carrito</button>
+<button type="submit" class="btn btn-primary boton1" [routerLink]="['/paquete-turistico-traslasierra']">Descripción</button>
     </div>       
     </ng-container>
 </div>

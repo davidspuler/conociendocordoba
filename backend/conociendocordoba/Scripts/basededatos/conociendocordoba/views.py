@@ -10,11 +10,14 @@ from rest_framework.decorators import api_view
 
 
 
+
+
 @api_view(['GET', 'POST'])
 @csrf_exempt
 def simular_compra(request, producto_id, cantidad):
     # Obtener detalles del producto desde la base de datos
     producto = Productos.objects.get(idproducto=producto_id)
+    Usuario = request.user
     
     # Calcular precios y monto total
     precio_unitario = producto.precio
@@ -27,7 +30,7 @@ def simular_compra(request, producto_id, cantidad):
         preciounitario=precio_unitario,
         preciototal=precio_total
     )
-    
+     
     # Generar factura asociada al carrito
     factura = Facturas.objects.create(
         idcarrito=carrito,

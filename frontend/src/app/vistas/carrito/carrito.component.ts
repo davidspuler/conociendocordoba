@@ -43,15 +43,17 @@ export class CarritoComponent {
   
     this.apiService.simularCompra(this.productos[0].idproducto, cantidadTotal).subscribe(
       (respuesta: any) => {
-        console.log(respuesta); // Muestra la confirmación de compra en la consola
-        // Aquí puedes realizar las acciones que desees con la respuesta de la confirmación
+        console.log(respuesta);// Muestra la confirmación de compra en la consola - Aquí puedes realizar las acciones que desees con la respuesta de la confirmación
+         alert ('Su pedido fue cargado con éxito');
+
       },
       (error: any) => {
         console.error(error);
+        alert ('Ha ocurrido un error, por favor intente nuevamente');
       }
     );
   }
-}  
+} 
 
 
 
