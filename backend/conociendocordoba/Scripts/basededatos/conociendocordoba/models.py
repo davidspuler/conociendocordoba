@@ -1,4 +1,5 @@
 from django.db import models
+from authentication.models import Usuario
 
 
 class Ciudades(models.Model):
@@ -19,7 +20,8 @@ class Productos(models.Model):
     precio = models.IntegerField(db_column='Precio')  # Field name made lowercase.
     imagen = models.ImageField(upload_to='img-basededatos/', blank=True, null=True)
     idciudad = models.ForeignKey(Ciudades, models.DO_NOTHING, db_column='idCiudad')  # Field name made lowercase.
-
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    cantidad = models.IntegerField(default=0)
     class Meta:
         managed = False
         db_table = 'productos'
@@ -32,6 +34,7 @@ class Historialcompras(models.Model):
     preciounitario = models.IntegerField(db_column='PrecioUnitario')  # Field name made lowercase.
     preciototal = models.IntegerField(db_column='PrecioTotal')  # Field name made lowercase.
     estado = models.CharField(db_column='Estado', max_length=10)  # Field name made lowercase.
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 
     class Meta:
         managed = False
@@ -44,6 +47,7 @@ class Carrito(models.Model):
     preciounitario = models.IntegerField(db_column='PrecioUnitario')  # Field name made lowercase.
     preciototal = models.IntegerField(db_column='PrecioTotal')  # Field name made lowercase.
 
+  
     class Meta:
         managed = False
         db_table = 'carrito'

@@ -20,125 +20,121 @@
 </section>
 -->
 
-<section class="oferta"> <a class="paquete" [routerLink]="['/paquete-turistico-cpaz']">
-    <div class="fotopaquete"> <img class="anchofoto" src="./assets/img/DSC07946.jpg" alt="Catedral de Córdoba">
+<section class="oferta"> 
+    <div class="fotopaquete"> <img class="anchofoto" src="./assets/img/DSC07946.jpg" alt="Carlos_Paz">
     </div>
-    <div class="nombrepaquete" *ngIf="products">
-        <ng-container *ngFor="let producto of products">
+    <div class="nombrepaquete" *ngIf="productos">
+        <ng-container *ngFor="let producto of productos">
             <div *ngIf="producto.idproducto == 6">        
     <h2> {{ producto.nombreproducto }}</h2>
     <p class="cuerpo">{{ producto.descripcion }}</p>
     <p> fecha: {{ producto.fecha }}</p>
     <p>Idioma: Ingles, Español</p>
     <p>Modalidad: Cancelacion Gratuita</p>
+    
+
+    <button type="submit" class="btn btn-primary boton"(click)="agregarAlCarrito(producto)">Agregar al carrito</button>
+    <button type="submit" class="btn btn-primary boton1" [routerLink]="['/paquete-turistico-cpaz']">Descripción</button>
+   
         </div>       
         </ng-container>
     </div>
-    <div class="precio" *ngIf="products">
-        <ng-container *ngFor="let producto of products">
+    <div class="precio" *ngIf="productos">
+        <ng-container *ngFor="let producto of productos">
         <div *ngIf="producto.idproducto == 6">   
         <p class="negrita">Desde</p>
         <p> $ {{ producto.precio }}</p>
             </div>       
             </ng-container>
     </div>   
-    </a>
-   <div class="ubicacion">
-        <button type="submit" class="btn btn-primary boton">Comprar</button>
-        <button type="submit" class="btn btn-primary boton1" [routerLink]="['/paquete-turistico-cpaz']">Descripción</button>
-    </div>
+   
 </section>
 
 
 <!--src="./assets/img/la cumbrecita.jpg-->
 
-<section class="oferta"> <a class="paquete" [routerLink]="['/paquete-turistico-la-cumbrecita']">
-    <div class="fotopaquete"> <img class="anchofoto" src="./assets/img/la cumbrecita.jpg" alt="Catedral de Córdoba">
+<section class="oferta">>
+    <div class="fotopaquete"> <img class="anchofoto" src="./assets/img/la cumbrecita.jpg" alt="la-cumbrecita">
     </div>
-    <div class="nombrepaquete" *ngIf="products">
-        <ng-container *ngFor="let producto of products">
+    <div class="nombrepaquete" *ngIf="productos">
+        <ng-container *ngFor="let producto of productos">
             <div *ngIf="producto.idproducto == 7">        
     <h2> {{ producto.nombreproducto }}</h2>
     <p class="cuerpo">{{ producto.descripcion }}</p>
     <p> fecha: {{ producto.fecha }}</p>
     <p>Idioma: Ingles, Español</p>
     <p>Modalidad: Cancelacion Gratuita</p>
+    <button type="submit" class="btn btn-primary boton"(click)="agregarAlCarrito(producto)">Agregar al carrito</button>
+    <button type="submit" class="btn btn-primary boton1" [routerLink]="['/paquete-turistico-la-cumbrecita']">Descripción</button>
+
         </div>       
         </ng-container>
     </div>
-    <div class="precio" *ngIf="products">
-        <ng-container *ngFor="let producto of products">
+    <div class="precio" *ngIf="productos">
+        <ng-container *ngFor="let producto of productos">
         <div *ngIf="producto.idproducto == 7">   
         <p class="negrita">Desde</p>
         <p> $ {{ producto.precio }}</p>
             </div>       
             </ng-container>
     </div>   
-    </a>
-  <div class="ubicacion">
-    <button type="submit" class="btn btn-primary boton">Comprar</button>
-    <button type="submit" class="btn btn-primary boton1" [routerLink]="['/paquete-turistico-la-cumbrecita']">Descripción</button>
-</div>
+    
 </section>
 
 <!--catedral1.jpg-->
 
-<section class="oferta"> <a class="paquete" [routerLink]="['/paquete-turistico-cba']">
+<section class="oferta"> >
 <div class="fotopaquete"> <img class="anchofoto" src="./assets/img/catedral1.jpg" alt="Catedral de Córdoba">
 </div>
-<div class="nombrepaquete" *ngIf="products">
-    <ng-container *ngFor="let producto of products">
+<div class="nombrepaquete" *ngIf="productos">
+    <ng-container *ngFor="let producto of productos">
         <div *ngIf="producto.idproducto == 8">        
 <h2> {{ producto.nombreproducto }}</h2>
 <p class="cuerpo">{{ producto.descripcion }}</p>
 <p> fecha: {{ producto.fecha }}</p>
 <p>Idioma: Ingles, Español</p>
 <p>Modalidad: Cancelacion Gratuita</p>
+<button type="submit" class="btn btn-primary boton"(click)="agregarAlCarrito(producto)">Agregar al carrito</button>
+<button type="submit" class="btn btn-primary boton1" [routerLink]="['/paquete-turistico-cba']">Descripción</button>
+
     </div>       
     </ng-container>
 </div>
-<div class="precio" *ngIf="products">
-    <ng-container *ngFor="let producto of products">
+<div class="precio" *ngIf="productos">
+    <ng-container *ngFor="let producto of productos">
     <div *ngIf="producto.idproducto == 8">   
     <p class="negrita">Desde</p>
     <p> $ {{ producto.precio }}</p>
         </div>       
         </ng-container>
 </div>   
-</a>
-<div class="ubicacion">
-    <button type="submit" class="btn btn-primary boton">Comprar</button>
-    <button type="submit" class="btn btn-primary boton1" [routerLink]="['/paquete-turistico-cba']">Descripción</button>
-</div>
 </section>
 
 <!--PARTE NUEVA 3-->
 
-<section class="oferta"> <a class="paquete" [routerLink]="['/paquete-turistico-traslasierra']">
-<div class="fotopaquete"> <img class="anchofoto" src="./assets/img/Nacimiento del rio Mina Clavero.jpg" alt="Catedral de Córdoba">
+<section class="oferta">
+<div class="fotopaquete"> <img class="anchofoto" src="./assets/img/Nacimiento del rio Mina Clavero.jpg" alt="traslasierra">
 </div>
-<div class="nombrepaquete" *ngIf="products">
-    <ng-container *ngFor="let producto of products">
+<div class="nombrepaquete" *ngIf="productos">
+    <ng-container *ngFor="let producto of productos">
         <div *ngIf="producto.idproducto == 9">        
 <h2> {{ producto.nombreproducto }}</h2>
 <p class="cuerpo">{{ producto.descripcion }}</p>
 <p> fecha: {{ producto.fecha }}</p>
 <p>Idioma: Ingles, Español</p>
 <p>Modalidad: Cancelacion Gratuita</p>
+<button type="submit" class="btn btn-primary boton"(click)="agregarAlCarrito(producto)">Agregar al carrito</button>
+<button type="submit" class="btn btn-primary boton1" [routerLink]="['/paquete-turistico-traslasierra']">Descripción</button>
     </div>       
     </ng-container>
 </div>
-<div class="precio" *ngIf="products">
-    <ng-container *ngFor="let producto of products">
+<div class="precio" *ngIf="productos">
+    <ng-container *ngFor="let producto of productos">
     <div *ngIf="producto.idproducto == 9">   
     <p class="negrita">Desde</p>
     <p> $ {{ producto.precio }}</p>
         </div>       
         </ng-container>
 </div>   
-</a>
-<div class="ubicacion">
-    <button type="submit" class="btn btn-primary boton">Comprar</button>
-    <button type="submit" class="btn btn-primary boton1" [routerLink]="['/paquete-turistico-traslasierra']">Descripción</button>
-</div>  
+
 </section>
