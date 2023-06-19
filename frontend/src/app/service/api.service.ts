@@ -6,20 +6,37 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-
-  private urlApi = 'https://rickandmortyapi.com/api/character/1,183';
-  private urlApiVarios = 'https://rickandmortyapi.com/api/character/';
-
+  
+  private apiUrl = 'http://127.0.0.1:8000/api/v1/productos/';
+  private carrito: any[] = [];
   constructor(private http: HttpClient) { }
 
-  public getData(): Observable<any> {
-    return this.http.get<any>(this.urlApi);
-
+  getProducts(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
   }
 
-  public getDataVarios(ids: string): Observable<any> {
-    return this.http.get<any>(this.urlApiVarios + ids);
+
+  addToCart(producto: any) {
+    this.carrito.push(producto);
   }
+
+  getCart(): any[] {
+    return this.carrito;
+  }
+
+  clearCart() {
+    this.carrito = [];
+  }
+  public simularCompra(producto: number, cantidad: number): Observable<any> {
+    const url = `http://127.0.0.1:8000/api/v1/simular/${producto}/${cantidad}/`;
+    const data = {}; // Si es necesario, puedes enviar datos adicionales en el cuerpo de la solicitud
+  
+    return this.http.post(url, data);
+  }
+  
+  
+  
+  
 
   public createUsuario(Nombre:string, Apellido: string, FechaNacimiento: Date, CorreoElectronico: string, 
     password: string): Observable<any> {
@@ -38,6 +55,8 @@ export class ApiService {
     return this.http.post<any>('http://localhost:8000/api/usuario/login/', datos);
   } 
 }
+
+
 
 
 

@@ -1,11 +1,14 @@
 from django.urls import path, include
 from rest_framework import routers
-#from Products.views import ProductosViewSet
-from conociendocordoba  import views
+from .views import simular_compra, ProductosViewSet
 
-router= routers.DefaultRouter()
-router.register(r'Productos',views.ProductosViewSet)
-#----
+
+router = routers.DefaultRouter()
+router.register(r'productos', ProductosViewSet, basename='productos')
+
 urlpatterns = [
-     path('', include(router.urls)),
+    
+    path('', include(router.urls)),
+    path('simular/<int:producto_id>/<int:cantidad>/', simular_compra, name='simular'),
+    
 ]

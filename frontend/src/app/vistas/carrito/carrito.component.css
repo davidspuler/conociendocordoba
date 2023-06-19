@@ -1,0 +1,48 @@
+/* Estilo para el contenedor principal del carrito */
+.carrito-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilo para el título del carrito */
+  .carrito-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para la lista de productos */
+  .carrito-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Estilo para cada elemento de la lista de productos */
+  .carrito-item {
+    margin-bottom: 5px;
+  }
+  
+  /* Estilo para el botón de vaciar carrito */
+  .carrito-button-vaciar {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el botón de comprar */
+  .carrito-button-comprar {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el mensaje de carrito vacío */
+  .carrito-empty-message {
+    font-size: 16px;
+    color: gray;
+  }

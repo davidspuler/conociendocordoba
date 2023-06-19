@@ -1,57 +1,32 @@
-create database conociendocórdoba;
-
 use conociendocórdoba;
 
-CREATE TABLE Usuario (
-  idUsuario INT AUTO_INCREMENT PRIMARY KEY,
-  Nombre VARCHAR(150) NOT NULL,
-  Apellido VARCHAR(150) NOT NULL,
-  FechaNacimiento DATE NOT NULL,
-  CorreoElectronico VARCHAR(150) NOT NULL,
-  admin boolean NOT NULL,
-  password VARCHAR(150) NOT NULL,
-  login boolean NOT NULL
-);
+SELECT * FROM productos;
+SELECT * FROM usuario;
+ALTER TABLE Productos
+ADD imagen varchar(100);
 
-CREATE TABLE Ciudades (
-  idCiudad INT AUTO_INCREMENT PRIMARY KEY,
-  NombreCiudad VARCHAR(150) NOT NULL
-);
-
-CREATE TABLE Productos (
-  idProducto INT AUTO_INCREMENT PRIMARY KEY,
-  NombreProducto VARCHAR(150) NOT NULL,
-  Descripcion VARCHAR(500) NOT NULL,
-  Fecha DATE NOT NULL,
-  Precio INT NOT NULL,
-  idCiudad INT NOT NULL,
-  FOREIGN KEY (idCiudad) REFERENCES Ciudades (idCiudad)
-);
+UPDATE productos SET Precio = 14000 WHERE idProducto = 8;
 
 
-CREATE TABLE Carrito (
-  idCarrito INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  idProducto INT NOT NULL,
-  Cantidad INT NOT NULL,
-  PrecioUnitario INT NOT NULL,
-  PrecioTotal INT NOT NULL,
-  FOREIGN KEY (idProducto) REFERENCES Productos (idProducto)
-);
+ALTER TABLE Productos
+ADD COLUMN usuario_id INT;
 
-CREATE TABLE HistorialCompras (
-  idHistorial INT AUTO_INCREMENT PRIMARY KEY,
-  idProducto INT NOT NULL,
-  FechaCompra DATE NOT NULL,
-  PrecioUnitario INT NOT NULL,
-  PrecioTotal INT NOT NULL,
-  Estado ENUM('Pendiente', 'En proceso', 'Entregado', 'Cancelado') NOT NULL,
-  FOREIGN KEY (idProducto) REFERENCES Productos (idProducto)
-);
+-- Agregar la relación ForeignKey
+ALTER TABLE Productos
+ADD CONSTRAINT fk_productos_usuario
+FOREIGN KEY (usuario_id)
+REFERENCES Usuario(idUsuario)
+ON DELETE CASCADE;
 
-CREATE TABLE Facturas (
-  idFactura INT AUTO_INCREMENT PRIMARY KEY,
-  idCarrito INT NOT NULL,
-  FechaFactura DATE NOT NULL,
-  MontoTotal INT NOT NULL,
-  FOREIGN KEY (idCarrito) REFERENCES Carrito (idCarrito)
-);
+
+SELECT * FROM factura;
+
+
+SELECT * FROM facturas;
+SELECT * FROM Productos;
+ALTER TABLE Productos;
+UPDATE Productos
+SET cantidad = cantidad + 1
+WHERE idproducto = 9;
+
+ALTER TABLE Productos ADD COLUMN cantidad INT DEFAULT 0;
