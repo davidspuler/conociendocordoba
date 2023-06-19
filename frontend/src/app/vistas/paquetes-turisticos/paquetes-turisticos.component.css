@@ -81,6 +81,20 @@ ul{
 	display: block;
 }
 
+.ubicacion{
+	margin-left: 75%;
+	display: inline;
+}
+
+.boton{
+	margin-right: 15px;
+	margin-bottom: 20px;
+}
+
+.boton1{
+	margin-bottom: 20px;	
+}
+
 /*PARTE NUEVA*/
 
 .title{

@@ -1,43 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/service/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-paquetes-turisticos',
   templateUrl: './paquetes-turisticos.component.html',
   styleUrls: ['./paquetes-turisticos.component.css']
 })
-export class PaquetesTuristicosComponent {
+export class PaquetesTuristicosComponent implements OnInit {
+  productos: any[] = [];
 
-  data: any[] = [];
-  data2: any[] = [];
-  dataSofia: any[] = [];
+  constructor(private ApiService: ApiService, private router: Router) { }
 
-
-  constructor (private apiService: ApiService) {}
-
-  ngOnInit():void{
-    this.llenarData()
-    this.llenarData2()
-    this.llenarDataSofia()
+  ngOnInit(): void {
+    this.ApiService.getProducts().subscribe(data => {
+      this.productos = data;
+    });
   }
 
-  llenarData(){
-    this.apiService.getData().subscribe( data => {
-      this.data= data;
-      console.log(this.data);
-    })
-  }
 
-  llenarData2(){
-    this.apiService.getDataVarios("3,4").subscribe( data => {
-      this.data2= data;
-    })
+  agregarAlCarrito(producto: any) {
+    this.ApiService.addToCart(producto);
+  // Puedes mostrar una notificación o mensaje al usuario de que el producto se ha agregado al carrito.
+  this.router.navigate(['/carrito']);
   }
-
-  llenarDataSofia(){
-    this.apiService.getDataVarios("5,6").subscribe( data => {
-      this.dataSofia= data;
-    })
-  }
-
 }
+
+
+
